@@ -1,0 +1,19 @@
+n=4;
+
+[coords,elements]=set_mesh(1,1,n,n);
+n=size(coords,1);
+u=zeros(n,1);
+
+u(13,1) = 1;
+
+hold on
+trisurf(elements,coords(:,1), coords(:,2), u, 'FaceColor', 'interp', 'LineWidth', 2 );
+colormap('copper')
+alpha(0.6)
+
+plot( coords(13,1), coords(13,2), 'o', 'LineWidth', 2);
+
+% show Vertex
+% 
+%  
+%
